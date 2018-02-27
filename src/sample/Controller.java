@@ -15,7 +15,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -35,6 +34,11 @@ public class Controller implements Initializable {
 
     @FXML
     private Label dbStatus;
+
+    public Controller(Label loginStatus, JFXButton btnLogin) {
+        this.loginStatus = loginStatus;
+        this.btnLogin = btnLogin;
+    }
 
 
     @Override

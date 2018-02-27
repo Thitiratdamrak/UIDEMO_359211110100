@@ -1,14 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="admin.adminController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.adminController">
+   <children>
+      <AnchorPane layoutX="-2.0" prefHeight="501.0" prefWidth="40.0" style="-fx-background-color: #aa2d0d;" />
+      <AnchorPane layoutX="38.0" prefHeight="40.0" prefWidth="787.0" style="-fx-background-color: #aa2d0d;">
+         <children>
+            <JFXButton fx:id="btnLogout" layoutX="721.0" layoutY="8.0" onAction="#logOut" text="LogOut" textFill="#ebe5e5" />
+         </children>
+      </AnchorPane>
+      <TabPane layoutX="38.0" layoutY="40.0" prefHeight="461.0" prefWidth="787.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Student">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="StudentData" layoutX="191.0" layoutY="48.0" prefHeight="329.0" prefWidth="582.0">
+                           <columns>
+                              <TableColumn prefWidth="37.0" text="ID" />
+                              <TableColumn prefWidth="138.0" text="FirstName" />
+                              <TableColumn prefWidth="145.0" text="LastName" />
+                              <TableColumn minWidth="0.0" prefWidth="99.0" text="Email" />
+                              <TableColumn prefWidth="165.0" text="Date of Birth" />
+                           </columns>
+                        </TableView>
+                        <JFXButton fx:id="btnLoad" layoutX="704.0" layoutY="14.0" onAction="#loadStudentData" text="Load data" />
+                        <TextField fx:id="Sarchtxt" layoutX="191.0" layoutY="14.0" prefHeight="25.0" prefWidth="304.0" promptText="Search...." />
+                        <JFXTextField fx:id="txtid" layoutX="14.0" layoutY="48.0" prefHeight="25.0" prefWidth="166.0" promptText="ID">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtfirstname" layoutX="14.0" layoutY="75.0" prefHeight="25.0" prefWidth="166.0" promptText="FirstName">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtlastname" layoutX="14.0" layoutY="102.0" prefHeight="25.0" prefWidth="166.0" promptText="LastName">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtemail" layoutX="14.0" layoutY="129.0" prefHeight="25.0" prefWidth="166.0" promptText="Email">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXDatePicker fx:id="txtdob" layoutX="14.0" layoutY="164.0" promptText="DOB">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </JFXDatePicker>
+                        <JFXButton fx:id="btnClear" layoutX="19.0" layoutY="226.0" onAction="#clearForm" prefHeight="25.0" prefWidth="153.0" text="Clear From" />
+                        <JFXButton fx:id="btnAdd" layoutX="19.0" layoutY="254.0" onAction="#addStudent" prefHeight="25.0" prefWidth="153.0" text="Add Data" />
+                        <JFXButton fx:id="btnSave" layoutX="21.0" layoutY="284.0" onAction="#saveStudent" prefHeight="25.0" prefWidth="153.0" text="Save" />
+                        <JFXButton fx:id="btnEdit" layoutX="205.0" layoutY="385.0" onAction="#editStudent" prefHeight="25.0" prefWidth="153.0" text="Edit" />
+                        <JFXButton fx:id="btnDelete" layoutX="374.0" layoutY="385.0" onAction="#deleteStudent" prefHeight="25.0" prefWidth="153.0" text="Delete" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Help?">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
 </AnchorPane>

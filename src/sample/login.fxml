@@ -19,37 +19,32 @@
                   <Image url="@../Image/1-512.png" />
                </image>
             </ImageView>
-            <Label layoutX="33.0" layoutY="187.0" text="School Managemant Systemt">
+            <Label layoutX="33.0" layoutY="187.0" text="School Management System">
                <font>
-                  <Font name="System Bold" size="17.0" />
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="361.0" prefHeight="17.0" prefWidth="233.0" text="\@CopyRight by FonThititat" textFill="#ee0c0c">
+               <font>
+                  <Font size="16.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <JFXTextField fx:id="username" labelFloat="true" layoutX="403.0" layoutY="71.0" />
-      <Label layoutX="395.0" layoutY="54.0" text="Username">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="395.0" layoutY="136.0" text="Password">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Label>
-      <JFXPasswordField fx:id="password" labelFloat="true" layoutX="403.0" layoutY="161.0" />
-      <ImageView fitHeight="48.0" fitWidth="62.0" layoutX="327.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+      <JFXTextField fx:id="username" labelFloat="true" layoutX="386.0" layoutY="85.0" promptText="Username" />
+      <JFXPasswordField fx:id="password" labelFloat="true" layoutX="386.0" layoutY="167.0" promptText="Password" />
+      <ImageView fitHeight="33.0" fitWidth="46.0" layoutX="335.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Image/Search-Male-User-icon.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="337.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="338.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Image/jxrxthziyixmldfontwk.png" />
          </image>
       </ImageView>
-      <JFXButton fx:id="btnlogin" layoutX="486.0" layoutY="234.0" onAction="#Login" style="-fx-background-color: #ec407a;" text="Login" />
-      <Label fx:id="LoginStatus" layoutX="357.0" layoutY="14.0" prefHeight="17.0" prefWidth="233.0" />
+      <JFXButton fx:id="btnLogin" layoutX="498.0" layoutY="217.0" onAction="#Login" style="-fx-background-color: #ec407a;" text="Login" />
+      <Label fx:id="LoginStatus" layoutX="321.0" layoutY="14.0" prefHeight="33.0" prefWidth="269.0" />
       <Label fx:id="dbStatus" layoutX="410.0" layoutY="361.0" prefHeight="17.0" prefWidth="168.0" />
       <Label layoutX="337.0" layoutY="358.0" text="dbStatus :">
          <font>
